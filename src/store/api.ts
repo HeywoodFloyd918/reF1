@@ -9,7 +9,7 @@ export const api = createApi({
     reducerPath: 'productsApi', // аналог названия
     tagTypes: ['Products'],
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:4000/',
+        baseUrl: 'https://reb1.onrender.com/',
     }),
     // build.mutation<ReturnType, ArgType>
     endpoints: (build) => ({
