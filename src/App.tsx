@@ -1,24 +1,20 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ProductsList from './components/ProductsList';
+import Product from './models/Product';
+import AddProductForm from './components/AddProductForm';
+import { TestComp } from './components/TestComp';
+import TestComp2 from './components/TestComp2';
+const App:FC =() =>{
+  const [products,setProducts] = useState<Product[]>()
 
-function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddProductForm ></AddProductForm>
+      <ProductsList></ProductsList>
+      <TestComp a={10} b={"hello"}></TestComp>
+      <TestComp2 a={10} b={"hello"}></TestComp2>
     </div>
   );
 }
